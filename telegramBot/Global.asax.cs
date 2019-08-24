@@ -11,7 +11,7 @@ using telegramBot.Models;
 
 namespace telegramBot
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class  MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {

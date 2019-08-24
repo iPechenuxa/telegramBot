@@ -19,16 +19,17 @@ namespace telegramBot.Models
 
         public static TelegramBotClient Get()
         {
-            /*
+            
             if (client != null)
             {
                 return client;
             }
-            */
-            commandList = new List<Command>();
+            
+            commandList = new List<Command>();                        
             commandList.Add(new Greeting());
+            commandList.Add(new Inpute());
             //команды
-                       
+
             client = new TelegramBotClient(ApplicationSetting.token);
             //опция Timeout не решила проблему с бесконечной отправкой сообщений от Eva.
 
@@ -36,7 +37,7 @@ namespace telegramBot.Models
             client.SetWebhookAsync(hook);
             //способ SetWebhookAsync не решил проблему с бесконечной отправкой сообщений от Eva.
             
-            return client;
+            return client;       
 
         }
 

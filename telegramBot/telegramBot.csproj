@@ -138,6 +138,7 @@
     </Compile>
     <Compile Include="Models\ApplicationSetting.cs" />
     <Compile Include="Models\Bot.cs" />
+    <Compile Include="Models\Command\Inpute.cs" />
     <Compile Include="Models\Command\Commands.cs" />
     <Compile Include="Models\Command\Greeting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\telegramBotEva - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\telegramBotEVA01 - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>

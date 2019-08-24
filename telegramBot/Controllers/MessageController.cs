@@ -9,7 +9,6 @@ using Telegram.Bot.Types;
 using telegramBot.Models;
 using System.Threading.Tasks;
 
-
 namespace telegramBot.Controllers
 {
     public class MessageController : ApiController
@@ -20,14 +19,16 @@ namespace telegramBot.Controllers
         public OkResult Update([FromBody]Update update)
         {
 
+            if (update == null) return Ok();
+
             var commands = Bot.Command;
             var message = update.Message;
-            var client = Bot.Get();
+            var client = Bot.Get();                         
 
             foreach (var command in commands)
             {
 
-                if (command.Contains(message.Text) != false)
+                if (command.Contains(message.Text))
                 {
                     
                     command.Execute(message, client);
